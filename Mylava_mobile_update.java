@@ -39,9 +39,9 @@ public class Mylava_mobile_update {
 		driver.manage().window().maximize();
 		// login with mylava nhq admin
 		WebElement useridInput = driver.findElement(By.id("userid"));
-		useridInput.sendKeys("nhqadmin");
+		useridInput.sendKeys("admin");
 		WebElement passInput = driver.findElement(By.name("pass"));
-		passInput.sendKeys("nhqadmin");
+		passInput.sendKeys("admin");
 		WebElement btnLogin = driver.findElement(By.id("btnLogin"));
 		btnLogin.click();
 		// getting the retailer update window
