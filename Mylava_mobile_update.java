@@ -16,11 +16,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Mylava_mobile_update {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		
+		//reading data from local file
 		File file = new File("D:\\retailers\\Retailers_new1.txt");
 		Scanner reader = new Scanner(file);
+		
+		//creating arraylist object
 		List<String> retailer_details = new ArrayList<String>();
-
+                //adding value one by one in the arraylist
 		while (reader.hasNextLine()) {
 
 			String data = reader.nextLine();
@@ -46,6 +48,9 @@ public class Mylava_mobile_update {
 		btnLogin.click();
 		// getting the retailer update window
 		driver.get("https://mylava.indlava.com/UpdateUser/update_mobile");
+		//getting the value of arraylis by logic even and odd 
+		//even== retailer code
+		//odd ==retailer mobile number
 		
 		for (int i = 0; i<retailer_details.size(); i++) {
 			if (i % 2 == 0) {
